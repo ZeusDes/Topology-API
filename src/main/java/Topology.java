@@ -38,9 +38,11 @@ public class Topology {
      * @return ArrayList of components
      */
     public ArrayList<Component> getNetlist(String netlistId){
-        ArrayList<Component> list = null;
+        ArrayList<Component> list = new ArrayList<Component>();
         for(int i = 0; i < components.size(); i++){
-            if(components.get(i).isConnected(netlistId)) list.add(components.get(i));
+            if(components.get(i).isConnected(netlistId) == true) {
+                list.add(components.get(i));
+            }
         }
         return list;
     }
@@ -64,10 +66,6 @@ public class Topology {
      * @return ArrayList component
      */
     public ArrayList<Component> getComponents() {
-        ArrayList<Component> compList = null;
-        for(int i = 0; i < components.size(); i++){
-            compList.add(components.get(i));
-        }
-        return compList;
+        return components;
     }
 }

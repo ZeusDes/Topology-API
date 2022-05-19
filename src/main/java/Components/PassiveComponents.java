@@ -47,6 +47,6 @@ public class PassiveComponents extends Component{
 
     @Override
     public boolean isConnected(String netlistID) {
-        return t1 == netlistID || t2 == netlistID;
+        return t1.equals(netlistID) || t2.equals(netlistID);
     }
 }

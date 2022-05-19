@@ -49,7 +49,7 @@ public class Transistors extends Component{
 
     @Override
     public boolean isConnected(String netlistID) {
-        return drain == netlistID || source == netlistID || gate == netlistID;
+        return (drain.equals(netlistID)) || (source.equals(netlistID)) || (gate.equals(netlistID));
     }
 
 }
